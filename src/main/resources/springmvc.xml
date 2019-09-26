@@ -9,12 +9,19 @@
 
 	<!--此文件负责整个mvc中的配置-->
 
-	<!--启用spring的一些annotation -->
-	<context:annotation-config/>
+
+	<!--	所有URL请求都将被Spring MVC的DispatcherServlet截获-->
 	<mvc:default-servlet-handler/>
-	<!-- 自动扫描装配 -->
+
+	<!--启用spring的一些annotation -->
+	<!--	<context:annotation-config/>-->
+	<!-- 自动扫描装配 除了具有<context:annotation-config>的功能之外，<context:component-scan>还可以在指定的package下扫描以及注册javabean -->
 	<context:component-scan base-package="mvc.controller" />
-	<!-- 配置注解驱动 可以将request参数与绑定到controller参数上 -->
+
+	<!-- 配置注解驱动 可以将request参数与绑定到controller参数上
+	 会自动注册DefaultAnnotationHandlerMapping与AnnotationMethodHandlerAdapter 两个bean，是springmvc为@controller分发请求所必须的；
+	没有<mvc:annotation-driven/>，会出现*.do请求不到的情况，出现404，因为servlet拦截了所有的请求，在添加了<mvc:annotation-driven/>之后，
+	.do请求才能被控制器捕捉和处理-->
 	<mvc:annotation-driven/>
 
 	<!-- 资源映射 -->

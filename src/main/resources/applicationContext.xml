@@ -15,5 +15,9 @@
     http://www.springframework.org/schema/util  http://www.springframework.org/schema/util/spring-util.xsd
     http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.1.xsd">
 
+    <import resource="applicationContext-dao.xml"></import>
+    <import resource="applicationContext-service.xml"></import>
+    <import resource="applicationContext-trans.xml"></import>
+    <import resource="applicationContext-jedis.xml"></import>
 
 </beans>
