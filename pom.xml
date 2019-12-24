@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>spring-mvc</groupId>
-    <artifactId>spring-mvc-demo</artifactId>
+    <artifactId>spring-mvc-a2z</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <description>这是一个springmvc的demo</description>
+    <description>陌上花开，可缓缓归矣</description>
     <packaging>war</packaging>
 
     <!-- 集中定义依赖版本号 -->
